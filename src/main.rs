@@ -16,4 +16,3 @@ fn main() {
         .add_plugins((DefaultPlugins, PlayerPlugin, CameraPlugin, LightPlugin, TerrainPlugin))
         .run();
 }
-
