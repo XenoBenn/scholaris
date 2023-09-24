@@ -2643,10 +2643,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "parry3d-f64"
+name = "parry3d"
 version = "0.13.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9789fd9474afd3b68cc1379a20b56c221dc73e1d5b21671c0646f78cd5441d8c"
+checksum = "b55dc0e6db79bddbc5fd583569f7356cdcc63e1e9b2b93a9ab70dd8e717160e0"
 dependencies = [
  "approx",
  "arrayvec",
@@ -2772,10 +2772,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c8a99fddc9f0ba0a85884b8d14e3592853e787d581ca1816c91349b10e4eeab"
 
 [[package]]
-name = "rapier3d-f64"
+name = "rapier3d"
 version = "0.17.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4b680491ffdf398dc4728782a094bc566f49af9676de8995881e9759155fffbd"
+checksum = "62a8a0bd9d3135f7b4eb45d0796540e7bab47b6b7c974f90567ccc5a0454f42b"
 dependencies = [
  "approx",
  "arrayvec",
@@ -2786,9 +2786,11 @@ dependencies = [
  "nalgebra",
  "num-derive",
  "num-traits",
- "parry3d-f64",
+ "parry3d",
+ "rayon",
  "rustc-hash",
  "simba",
+ "vec_map",
 ]
 
 [[package]]
@@ -2802,6 +2804,26 @@ name = "rawpointer"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "60a357793950651c4ed0f3f52338f53b2f809f32d83a07f72909fa13e4c6c1e3"
+
+[[package]]
+name = "rayon"
+version = "1.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9c27db03db7734835b3f53954b534c91069375ce6ccaa2e065441e07d9b6cdb1"
+dependencies = [
+ "either",
+ "rayon-core",
+]
+
+[[package]]
+name = "rayon-core"
+version = "1.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5ce3fb6ad83f861aac485e76e1985cd109d9a3713802152be56c3b1f0e0658ed"
+dependencies = [
+ "crossbeam-deque",
+ "crossbeam-utils",
+]
 
 [[package]]
 name = "rectangle-pack"
@@ -2948,7 +2970,7 @@ name = "scholaris"
 version = "0.1.0"
 dependencies = [
  "bevy",
- "rapier3d-f64",
+ "rapier3d",
 ]
 
 [[package]]
